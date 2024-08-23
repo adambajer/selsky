@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapka</title>
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/favicon-16x16.png">
+    <link rel="manifest" href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+    /* Base styles */
+* {
+    font-family: "Quicksand", "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.hover-effect {
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 0.1;
+}
+svg {
+max-width:600px;}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+
+.container {
+    display:inline-flex;
+     align-items: flex-start;
+
+     border-bottom: 1px solid #ccc;
+
+}
+
+.top-panel {
+    overflow: hidden;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;     border-bottom: 1px solid #ccc;
+}
+
+.middle-panel { 
+    
+ 
+}
+
+.right-panel {  
+       border-left: 1px solid #ccc;
+     background-color: white;       
+     border-right: 1px solid #ccc;
+}
+
+.content-image {
+  width:100vh;
+   height: auto;
+}
+
+ 
+#contentText {
+    width: auto;    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.legend { 
+    display: inline;
+    width: 100%;
+}
+
+#contentTitle {  
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;            border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.contentTitle {       padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;         
+
+}
+
+.legend-item { background-color: white;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;    border-right: 1px solid #ccc;  border-top: 1px solid #ccc;
+
+    display: inline-flex;
+}
+
+.legend-item span {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    margin-right: 5px;
+    display: inline-block;
+}
+.legend-item.active {background: white;    border-bottom: 1px solid white;
+}
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.active-map-part {
+    /* No border here, will adjust fill color instead */
+}
+
+.legend-item.active { 
+    /* Light background for the active legend */
+   background: #eee;
+}
+#left-pointer {
+    animation: bounce 1s infinite;
+    margin-right: 10px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+}
+ 
+
+    </style>
+    <div class="top-panel">
+        <div class="legend" id="legend">
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="middle-panel">
+       
+<div class="contentTitle">Mapa Selského Dvora</div>
+            <svg width="100%" height="100%" viewBox="0 0 90.827335 128.4355" version="1.1" id="svg5"
+                xmlns:svg="http://www.w3.org/2000/svg">
+
+                <g id="g3" transform="matrix(2.1476804,0,0,2.1584459,-50.795127,-314.30528)" inkscape:label="mapka">
+                    <g id="objekty" inkscape:label="objekty" transform="translate(1.7013486e-7,1.0498795)">
+
+
+
+                        <path style="fill:#87ce87;fill-opacity:1;"
+                            d="m 17.641954,43.71498 -0.26748,-3.626707 4.04565,-13.26432 12.33758,4.029667 -4.11253,13.129999 -3.4145,-1.121373 0.17129,3.639913 z"
+                            id="budovaa" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/20.jpg" 
+                            data-description="Plocha prvního patra: 95 m2 <br> Plocha druhého patra: 95 m2 <br> <a target='_blank' href='https://selsky-dvur.info/apartman-a/'>APARTMÁN A - zážitkové ubytování</a><br><br>
+                            Celková kapacita apartmánu A je 11 osob s možností 7 přistýlek." data-title="Apartmán A"
+                            sodipodi:nodetypes="cccccccc" inkscape:label="budovaa"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="display:inline;fill:#afe9af;fill-opacity:1;"
+                            d="m 27.973403,67.254925 -1.571439,-20.752744 -0.17129,-3.63991 3.4145,1.12137 4.11253,-13.13001 8.05787,2.55213 11.06703,12.15616 3.24321,19.51031 -4.88153,1.07458 z"
+                            id="dvura" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/3.jpg" data-description="Celková plocha: 387 m2 <br>Zadlážděná plocha: 250 m2 <br>Dlážděný dvůr nabízí bezpečné parkování několika vozidel, které jsou mimo hlavní komunikaci a pod dohledem kamery. <br> <br>
+                                <a target='_blank' href='https://selsky-dvur.info/apartman-a/'>APARTMÁN A - zážitkové ubytování</a>
+                            <p>Celková kapacita apartmánu A je 11 osob s možností 7 přistýlek.</p>"
+                            data-title="Dvůr apartmánu A" sodipodi:nodetypes="cccccccccc" inkscape:label="dvura"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="fill:#afe9af;fill-opacity:1;"
+                            d="m 45.747674,37.731695 3.20283,3.50425 -4.98953,4.54892 -3.1896,-3.49103 z" id="terasaa"
+                            class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2020/06/IMG_20200630_181654.jpg"
+                            data-description="Tato terasa nabízí posezení pro 6 lidí a je zde gril na plyn. Terasa je pod ořechem a je vydlážděna pomocí cihle. <br><br><a target='_blank' href='https://selsky-dvur.info/apartman-a/'>APARTMÁN A - zážitkové ubytování</a><br><br>
+                            Celková kapacita apartmánu A je 11 osob s možností 7 přistýlek."
+                            data-title="Terasa apartmánu A" inkscape:label="terasaa"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+
+                        <path style="fill:#ebcf5a;fill-opacity:1;"
+                            d="m 17.641954,43.71498 8.76001,2.787179 1.57145,20.752765 -8.45909,0.604452 z" id="budovab"
+                            class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2022/11/ubytovani-pro-firmy-2.jpeg"
+                            data-description="Zastavěná plocha: 105 m2 <br> <a target='_blank' href='https://selsky-dvur.info/apartman-b/'>APARTMÁN B - bezbariérové ubytování</a>
+                            <p>Celková kapacita apartmánu B je 6 osob s možností 2 přistýlek.</p>"
+                            data-title="Apartmán B" sodipodi:nodetypes="ccccc" inkscape:label="budovab"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="fill:#ffe680;fill-opacity:1;"
+                            d="m 3.3651337,34.312421 4.21284,-11.954682 13.8421503,4.466214 -4.04565,13.26432 2.13985,27.771103 -14.2768103,0.973849 c -1.0268,-11.417313 -1.22764,-23.050616 -1.87238,-34.520804 z"
+                            id="zahradab" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/terasa_budovab-scaled.jpg"
+                            data-description="Celková plocha: 300 m2 <br> Zahrada apartmánu B je celá krytá krásným trávníkem a je v ní ovocný sad.<br><br>
+                                <a target='_blank' href='https://selsky-dvur.info/apartman-b/'>APARTMÁN B - bezbariérové ubytování</a>
+                            <p>Celková kapacita apartmánu B je 6 osob s možností 2 přistýlek.</p>"
+                            data-title="Zahrada apartmánu B" sodipodi:nodetypes="ccccccc" inkscape:label="zahradab"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="display:inline;fill:#ffe680;fill-opacity:1;"
+                            d="m 15.633424,60.265757 -0.44998,-6.57213 3.32194,-0.2248 0.45498,6.577332 z" id="terasab"
+                            class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/terasa_budovab-scaled.jpg"
+                            data-description="Terasa apartmánu B je nyní krytá balkonem chystaného apartmánu C. Je zde k dispozici gril a posezení.<br><br>
+                                <a target='_blank' href='https://selsky-dvur.info/apartman-b/'>APARTMÁN B - bezbariérové ubytování</a>
+                            <p>Celková kapacita apartmánu B je 6 osob s možností 2 přistýlek.</p>"
+                            data-title="Terasa apartmánu B" sodipodi:nodetypes="ccccc" inkscape:label="terasab"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="display:inline;fill:#aaeeff;fill-opacity:1;"
+                            d="m 47.532984,48.953547 4.07909,-0.906674 3.47725,17.260401 -3.84504,0.839504 z"
+                            id="kolarna" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/pristavek_pro_kola.jpeg"
+                            data-description="Celková plocha: 15 m2 <br> Nabízíme Vám krytou úschovnu kol, vleze se zde až 10 kol. <br><br>Více informací zde <a target='_blank' href='https://selsky-dvur.info'>Selský Dvůr Moravská Huzová</a>"
+                            data-title="Kolárna" sodipodi:nodetypes="ccccc" inkscape:label="terasab"
+                            inkscape:label="kolarna" sodipodi:nodetypes="ccccc"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="fill:#cccccc;fill-opacity:1;"
+                            d="m 7.5779737,22.357739 2.6413803,-7.051901 17.92124,6.615356 13.67498,11.484566 z"
+                            id="parkoviste" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/2.jpg"
+                            data-description="Celková plocha: 66 m2 <br> Bezpečné parkování pod kamerami před ubytováním i ve dvoře.<br><br>Více informací zde <a target='_blank' href='https://selsky-dvur.info'>Selský Dvůr Moravská Huzová</a>"
+                            data-title="Parkoviště" sodipodi:nodetypes="ccccc" inkscape:label="parkoviste"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="display:inline;fill:#ffd5d5;"
+                            d="m 25.952904,111.35944 0.79409,-9.53423 -16.42443,-1.36203 -0.7941003,9.521 z" id="garaz"
+                            sodipodi:nodetypes="ccccc" inkscape:label="garaz"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                        <path style="fill:#ffd5d5;fill-opacity:1;"
+                            d="m 5.2375137,68.833225 22.7359003,-1.578301 23.27087,-1.108115 4.88153,-1.074613 2.74169,18.267812 1.20366,13.768033 1.33741,12.760609 -23.43805,3.52597 -15.4136,-2.2499 -15.0792603,-1.24249 z"
+                            id="zamestnanci" class="hover-effect"
+                            data-src="https://selsky-dvur.info/wp-content/uploads/2024/03/socialnipodnik-1024x576.jpg"
+                            data-description="Celková plocha: 1 147 m2 <br> Zde jsou naše slepčiky a další zvířátka, zde má přístup pouze zaměstnanec Selského Dvora."
+                            data-title="Areál pro zaměstnance" sodipodi:nodetypes="cccccccccc" inkscape:label="dvura"
+                            inkscape:label="zamestnanci" sodipodi:nodetypes="cccccccccccccc"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+
+                        <path style="display:inline;fill:#f2f2f2;fill-opacity:1;"
+                            d="m 10.219354,15.305837 17.92124,6.615356 13.67498,11.484567 11.06703,12.156159 5.9849,37.778089 1.20366,13.768033 1.33741,12.760609 15.81482,-2.38422 -2.97572,-25.756284 c 0,0 -3.25993,-21.105369 -5.4165,-32.707448 -2.15657,-11.602079 -9.47983,-22.33779 -17.7875,-30.793361 -4.61204,-4.69415 -11.00192,-7.264505 -16.91819,-10.1749139 -5.91626,-2.9104081 -18.4562,-7.21980708 -18.4562,-7.21980708 z"
+                            class="hover-effect" data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/1.jpg"
+                            data-description="Selský dvůr je cca 16 km od Olomouce, 10 Km od Šternberka a je tu také v blízkosti jezero Náklo. <br><br>Více informací zde <a target='_blank' href='https://selsky-dvur.info'>Selský Dvůr Moravská Huzová</a>"
+                            data-title="Komunikace" id="komunikace" sodipodi:nodetypes="ccccccccczazcc"
+                            inkscape:label="komunikace"
+                            transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+
+                    </g>
+
+                </g>
+            </svg>
+        </div>
+        <div class="right-panel">
+            <div id="contentTitle"><svg id="left-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="vertical-align: middle;">
+                <path d="M19 12H5M12 5l-7 7 7 7"></path>
+            </svg>Kurzorem klikněte na oblast pro více informací.</div>
+            <img id="contentImage" src="" alt="" class="content-image" />
+            <p id="contentText">
+                
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hoverElements = document.querySelectorAll('.hover-effect');
+            const legend = document.getElementById('legend');
+            let currentImageIndex = 0;
+            let images = [];
+
+            // Function to extract fill color from inline style
+            function getFillColorFromStyle(style) {
+                const fillMatch = style.match(/fill:\s*([^;]+)/);
+                return fillMatch ? fillMatch[1] : '#000'; // Default to black if no fill found
+            }
+
+            // Function to darken the color
+            function darkenColor(color) {
+                let r = parseInt(color.slice(1, 3), 16);
+                let g = parseInt(color.slice(3, 5), 16);
+                let b = parseInt(color.slice(5, 7), 16);
+
+                r = Math.max(0, r - 30);
+                g = Math.max(0, g - 30);
+                b = Math.max(0, b - 30);
+
+                return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+            }
+
+            // Generate legend
+            hoverElements.forEach(function (element) {
+                const style = element.getAttribute('style');
+                const color = getFillColorFromStyle(style);
+                const title = element.getAttribute('data-title');
+
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                legendItem.innerHTML = `<span style="background-color: ${color};"></span>${title}`;
+                legendItem.addEventListener('click', function () {
+                    updateContent(
+                        element.getAttribute('data-src'),
+                        element.getAttribute('data-description'),
+                        title,
+                        element
+                    );
+                });
+                legend.appendChild(legendItem);
+                element.legendItem = legendItem; // Link legend item with element
+            });
+
+            hoverElements.forEach(function (element) {
+                const style = element.getAttribute('style');
+                const originalFill = getFillColorFromStyle(style);
+                element.setAttribute('data-original-fill', originalFill);
+
+                element.addEventListener('click', function () {
+                    const imageSrc = this.getAttribute('data-src');
+                    const description = this.getAttribute('data-description');
+                    const title = this.getAttribute('data-title');
+
+                    updateContent(imageSrc, description, title, this);
+                });
+            });
+
+            function updateContent(imageSrc, text, title, element) {
+                // Update the images array and set current index
+                images = Array.from(document.querySelectorAll('.hover-effect'));
+                currentImageIndex = images.indexOf(element);
+
+                // Toggle arrows before displaying content to ensure immediate response
+
+                // Update the content
+                document.getElementById("contentTitle").innerText = title;
+                document.getElementById("contentImage").src = imageSrc;
+                document.getElementById("contentText").innerHTML = text;
+
+                // Set the active element
+                setActiveElement(element, element.legendItem);
+
+                // Log current state for debugging
+                console.log('Current Index:', currentImageIndex);
+
+
+              
+            }
+
+            function setActiveElement(element, legendItem) {
+                hoverElements.forEach(el => {
+                    const originalFill = el.getAttribute('data-original-fill');
+                    el.setAttribute('style', `fill: ${originalFill};`);
+                    el.legendItem.classList.remove('active');
+                });
+
+                const originalFill = element.getAttribute('data-original-fill');
+                const darkerFill = darkenColor(originalFill);
+                element.setAttribute('style', `fill: ${darkerFill};`);
+                legendItem.classList.add('active');
+            }
+
+
+        });
+
+    </script>
+</body>
+
+</html>
