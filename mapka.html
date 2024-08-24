@@ -25,11 +25,16 @@
 
 .hover-effect {
     cursor: pointer;
-    stroke: black;
-    stroke-width: 0.1;
+ stroke: black;
+ stroke-width: 0.2;
 }
-svg {
-max-width:600px;}
+
+.middle-panel svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Prevents overflowing */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -37,12 +42,13 @@ body {
 }
 
 .container {
-    display:inline-flex;
-     align-items: flex-start;
-
-     border-bottom: 1px solid #ccc;
-
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of content if necessary */
+    justify-content: center; /* Center items if they wrap */
+    align-items: flex-start; /* Align items to the start */
+    width: 100vw;
 }
+
 
 .top-panel {
     overflow: hidden;
@@ -56,16 +62,34 @@ body {
  
 }
 
-.right-panel {  
-       border-left: 1px solid #ccc;
-     background-color: white;       
-     border-right: 1px solid #ccc;
+.right-panel {
+    border-left: 1px solid #ccc;
+    background-color: white;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%; /* Make sure the right panel uses full width in smaller screens */
+    max-width: 600px; /* Optionally limit the maximum width */
+    margin: 0 auto; /* Center the panel on larger screens */
+}
+@media (orientation: portrait) {
+    .container {
+        flex-direction: column; /* Stack the panels vertically in portrait mode */
+    }
+    .right-panel {
+        width: 100%; /* Ensure full width in portrait mode */
+    }
 }
 
+
 .content-image {
-  width:100vh;
-   height: auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the allocated space, preserving the aspect ratio */
+    display: block; /* Removes any inline-block space */
+    margin: 0 auto; /* Centers the image horizontally if it’s smaller than the container */
 }
+
 
  
 #contentText {
@@ -139,6 +163,15 @@ body {
         transform: translateX(-5px);
     }
 }
+
+#arrow {
+    position: absolute;
+    stroke: #000;
+    stroke-width: 2;
+    fill: none;
+    pointer-events: none; /* To make sure it doesn't interfere with other events */
+}
+
  
 
     </style>
@@ -153,7 +186,7 @@ body {
 <div class="contentTitle">Mapa Selského Dvora</div>
             <svg width="100%" height="100%" viewBox="0 0 90.827335 128.4355" version="1.1" id="svg5"
                 xmlns:svg="http://www.w3.org/2000/svg">
-
+            
                 <g id="g3" transform="matrix(2.1476804,0,0,2.1584459,-50.795127,-314.30528)" inkscape:label="mapka">
                     <g id="objekty" inkscape:label="objekty" transform="translate(1.7013486e-7,1.0498795)">
 
@@ -250,6 +283,7 @@ body {
 
                 </g>
             </svg>
+         
         </div>
         <div class="right-panel">
             <div id="contentTitle"><svg id="left-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -268,37 +302,17 @@ body {
         document.addEventListener("DOMContentLoaded", function () {
             const hoverElements = document.querySelectorAll('.hover-effect');
             const legend = document.getElementById('legend');
-            let currentImageIndex = 0;
-            let images = [];
-
-            // Function to extract fill color from inline style
-            function getFillColorFromStyle(style) {
-                const fillMatch = style.match(/fill:\s*([^;]+)/);
-                return fillMatch ? fillMatch[1] : '#000'; // Default to black if no fill found
-            }
-
-            // Function to darken the color
-            function darkenColor(color) {
-                let r = parseInt(color.slice(1, 3), 16);
-                let g = parseInt(color.slice(3, 5), 16);
-                let b = parseInt(color.slice(5, 7), 16);
-
-                r = Math.max(0, r - 30);
-                g = Math.max(0, g - 30);
-                b = Math.max(0, b - 30);
-
-                return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
-            }
-
-            // Generate legend
+        
+            // Generate the legend
             hoverElements.forEach(function (element) {
                 const style = element.getAttribute('style');
                 const color = getFillColorFromStyle(style);
                 const title = element.getAttribute('data-title');
-
+        
                 const legendItem = document.createElement('div');
                 legendItem.className = 'legend-item';
                 legendItem.innerHTML = `<span style="background-color: ${color};"></span>${title}`;
+                
                 legendItem.addEventListener('click', function () {
                     updateContent(
                         element.getAttribute('data-src'),
@@ -307,62 +321,67 @@ body {
                         element
                     );
                 });
+        
                 legend.appendChild(legendItem);
-                element.legendItem = legendItem; // Link legend item with element
+                element.legendItem = legendItem; // Link legend item with the SVG element
             });
-
+        
             hoverElements.forEach(function (element) {
                 const style = element.getAttribute('style');
                 const originalFill = getFillColorFromStyle(style);
+                
                 element.setAttribute('data-original-fill', originalFill);
-
+        
                 element.addEventListener('click', function () {
                     const imageSrc = this.getAttribute('data-src');
                     const description = this.getAttribute('data-description');
                     const title = this.getAttribute('data-title');
-
+        
                     updateContent(imageSrc, description, title, this);
                 });
             });
-
+        
             function updateContent(imageSrc, text, title, element) {
-                // Update the images array and set current index
-                images = Array.from(document.querySelectorAll('.hover-effect'));
-                currentImageIndex = images.indexOf(element);
-
-                // Toggle arrows before displaying content to ensure immediate response
-
-                // Update the content
                 document.getElementById("contentTitle").innerText = title;
                 document.getElementById("contentImage").src = imageSrc;
                 document.getElementById("contentText").innerHTML = text;
-
-                // Set the active element
-                setActiveElement(element, element.legendItem);
-
-                // Log current state for debugging
-                console.log('Current Index:', currentImageIndex);
-
-
-              
+        
+                setActiveElement(element);
             }
-
-            function setActiveElement(element, legendItem) {
+        
+            function setActiveElement(activeElement) {
                 hoverElements.forEach(el => {
-                    const originalFill = el.getAttribute('data-original-fill');
-                    el.setAttribute('style', `fill: ${originalFill};`);
+                    if (el === activeElement) {
+                        // Highlight the active element by keeping its original fill
+                        el.setAttribute('style', `
+                            fill: ${el.getAttribute('data-original-fill')}; 
+                            filter: none; /* Remove any applied filter */
+                            opacity: 1; /* Restore full opacity */
+                        `);
+                    } else {
+                        // Apply a lower contrast effect by reducing opacity and applying a grayscale filter
+                        el.setAttribute('style', `
+                            fill: ${el.getAttribute('data-original-fill')}; 
+                            filter: grayscale(30%);
+                            opacity: 0.9;
+                        `);
+                    }
+                });
+        
+                // Set the active state in the legend
+                hoverElements.forEach(el => {
                     el.legendItem.classList.remove('active');
                 });
-
-                const originalFill = element.getAttribute('data-original-fill');
-                const darkerFill = darkenColor(originalFill);
-                element.setAttribute('style', `fill: ${darkerFill};`);
-                legendItem.classList.add('active');
+                activeElement.legendItem.classList.add('active');
             }
-
-
+        
+            function getFillColorFromStyle(style) {
+                const fillMatch = style.match(/fill:\s*([^;]+)/);
+                return fillMatch ? fillMatch[1] : '#000';
+            }
         });
-
+                
+                 
     </script>
 </body>
 
