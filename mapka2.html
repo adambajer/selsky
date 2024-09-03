@@ -205,49 +205,7 @@
         }
 
         /* Basic styles for the popup */
-        .info-popup {
-            position: absolute;
-            z-index: 100;
-            pointer-events: none;
-            width: 40vw;
-            /* Adjust width as needed */
-        }
-
-        .info-content {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            /* Stack the text above the image */
-            flex-wrap: nowrap;
-        }
-
-        /* Styles for the left side of the popup (text content) */
-        .info-popup .popup-text {
-            width: 100%;
-            /* Full width for the text */
-            padding: 10px;
-            backdrop-filter: blur(18px);
-            background-color: #ffffffc9;
-            border: 1px solid #ccc;
-            border-top-left-radius: 3px;
-            border-top-right-radius: 3px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styles for the image in the popup */
-        .info-popup .popup-image {
-            width: 100%;
-            /* Full width for the image */
-        }
-
-        .info-popup .popup-image img {
-            width: 54.5vh;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            height: auto;
-            object-fit: cover;
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
-        }
+       
 
         svg {
             width: auto;
@@ -310,8 +268,7 @@
 }
 
 /* Popup text and image styling */
-.popup-text {
-    padding: 10px;
+.popup-text { 
 }
 
 .popup-image img {
@@ -319,21 +276,75 @@
     height: auto;
     display: none; /* Initially hide the image */
 }
+/* General styles for the popup */
+.info-popup {
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    max-width: 40vw; /* Adjust based on your layout */
+ }
 
-/* Ensure that the image and text container sizes are consistent */
 .info-content {
+    padding:10px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    backdrop-filter: blur(20px);
+    background-color: #ffffffd9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border:1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* Styles for the text in the popup */
+.popup-text {
+    width: 100%; 
+      
+}
+
+/* Styles for the image in the popup */
+.popup-image {
+    width: 100%;
+    max-height: 40vh; /* Limit the height to prevent overly tall images */
+    overflow: hidden; /* Ensure content fits within the boundaries */
+    position: relative;
+}
+
+.popup-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Loader styles */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Additional adjustments */
 .popup {
     display: none;
     position: absolute;
     background-color: white;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -341,15 +352,21 @@
     border-bottom: 1px solid #ccc;
 }
 
+.nazev {
+text-transform: uppercase;
+font-size: 1.2rem; 
+border-bottom: 1px solid #ccc;
+padding-bottom: 5px;
+}
 
     </style>
 
     <div id="info-popup" class="info-popup">
         <div class='info-content'></div>
     </div>
-    <h1 class="center">Interaktivní mapa - Apartmán A</h1>
+    <h1 class="center">Apartmán A</h1>
     <div class="half">
-        <div class="">Přízemí</div>
+        <div class="">Přízemní patro</div>
         <div class="">Nadzemní patro</div>
     </div>
 
@@ -1340,7 +1357,7 @@
                 const description = this.getAttribute('data-description');
                 const title = this.getAttribute('data-title');
     
-                const content = `<strong>${title}</strong><br><p>${description}</p>`;
+                const content = `<div class="nazev">${title}</div><p>${description}</p>`;
                 showPopup(evt, content, imageSrc);
             });
     
