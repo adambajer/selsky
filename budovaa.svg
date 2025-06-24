@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Apartmán A</title>
-   <link rel="apple-touch-icon" sizes="180x180"
-      href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32"
-      href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16"
-      href="https://selsky-dvur.info/wp-content/themes/selsky-dvur-2024/favicon-16x16.png">
-   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" id="contact-form-7-css" href="./mapka2.css" media="all">
-</head>
-
-<body>
-
-   <div class="container">
-      <div class="panel1">
-         <div id="tools"> 
-            <button id="close-btn2"><a class="link" href="./mapka.html">X</a></button>
-           
-             
-         </div>  
-         <div class="title-content-main">Apartmán A</div>
-      </div>
-
-      <div class="panel2">
-
-         <svg version="1.1" viewBox="0 0 200 124" width="100%" height="100%" id="map-svg" sodipodi:docname="6t.svg"
+        <svg version="1.1" viewBox="0 0 200 124" width="100%" height="100%" id="map-svg" sodipodi:docname="6t.svg"
             inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
             xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
             xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg"
@@ -456,6 +425,7 @@
             <g id="g228" style="display:inline">
                <g id="g10" style="display:inline">
                   <path class="hover-effect pokoj"
+                  data-patro="Patro"
                      data-src="https://selsky-dvur.info/wp-content/uploads/2024/09/toaletavpatre.jpg"
                      data-description="Toaleta s umyvadlem." data-title="Toaleta v patře"
                      style="fill:#ffffff;stroke-width:0;stroke-miterlimit:4.1;paint-order:markers stroke fill"
@@ -838,54 +808,3 @@
                </g>
             </g>
          </svg>
-
-      </div>
-   </div>
-
-
-</body>
-
-
-<div id="zoom-container">
-   <input type="range" id="zoom-slider" min="100" max="300" value="100" step="10">
-</div>
-</div>
-
-
-<div id="info-popup" class="info-popup">
-   <div class='info-content'></div>
-</div>
-
-<!-- Fullscreen Overlay -->
-<div id="overlay">
-   <div id="overlay-content">
-      <div class="panel-content1">
-         <div id="tools">
-            <div>
-
-            
-            <button id="close-btn">X</button>
-         </div>
-         <div>
-            <button class="nav-btn" id="prev-btn" title="Předchozí místnost">←</button>
-            <button class="nav-btn" id="next-btn" title="Další místnost">→</button>
-         </div>
-            
-         </div>
-         <div class="titledescription-content">
-            <div class="title-content"></div>
-            <div class="description-content"></div>
-         </div>
-      </div>
-      <div class="panel-content2">
-         <img src="" />
-      </div>
-   </div>
-</div>
-
-
-<script src="./mapka2.js">
-
-</script>
-
-</html>

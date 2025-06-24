@@ -1,0 +1,92 @@
+ <svg width="100%" height="  " viewBox="0 0 90.827335 118.4355" version="1.1" id="svg5"
+        xmlns:svg="http://www.w3.org/2000/svg">
+  
+        <g id="g3" transform="matrix(2.1476804,0,0,2.1584459,-50.795127,-314.30528)" inkscape:label="mapka">
+            <g id="objekty" inkscape:label="objekty" transform="translate(1.7013486e-7,1.0498795)">
+  
+  
+  
+                <path style="fill:#87ce87;fill-opacity:1;"
+                    d="m 17.641954,43.71498 -0.26748,-3.626707 4.04565,-13.26432 12.33758,4.029667 -4.11253,13.129999 -3.4145,-1.121373 0.17129,3.639913 z"
+                    id="budovaa" class="hover-effect" data-src=".\druhepatro.png"
+                    data-description="Plocha: 159 m<sup>2</sup><br>
+                Kapacita apartmánu A je 11 osob s možností 7 přistýlek.<br> <br> Klikněte na obrázek vpravo pro otevření interaktivní mapy apartmánu A ➙"
+                    data-title="Apartmán A" sodipodi:nodetypes="cccccccc" inkscape:label="budovaa"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="display:inline;fill:#afe9af;fill-opacity:1;"
+                    d="m 27.973403,67.254925 -1.571439,-20.752744 -0.17129,-3.63991 3.4145,1.12137 4.11253,-13.13001 8.05787,2.55213 11.06703,12.15616 3.24321,19.51031 -4.88153,1.07458 z"
+                    id="dvura" class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/3.jpg"
+                    data-description="Plocha: 387 m<sup>2</sup> <br>Zadlážděná plocha: 250 m<sup>2</sup> <br>Dlážděný dvůr nabízí bezpečné parkování několika vozidel, které jsou mimo hlavní komunikaci a pod dohledem kamery."
+                    data-title="Dvůr apartmánu A" sodipodi:nodetypes="cccccccccc" inkscape:label="dvura"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="fill:#afe9af;fill-opacity:1;"
+                    d="m 45.747674,37.731695 3.20283,3.50425 -4.98953,4.54892 -3.1896,-3.49103 z" id="terasaa"
+                    class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2020/06/IMG_20200630_181654.jpg"
+                    data-description="Tato terasa nabízí posezení pro 6 lidí a je zde gril na plyn. Terasa je pod ořechem a je vydlážděna pomocí cihle."
+                    data-title="Terasa apartmánu A" inkscape:label="terasaa"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+  
+                <path style="fill:#ebcf5aff;fill-opacity:1;"
+                    d="m 17.641954,43.71498 8.76001,2.787179 1.57145,20.752765 -8.45909,0.604452 z" id="budovab"
+                    class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2022/11/ubytovani-Olomouc.jpeg"
+                    data-description="Plocha: 74 m<sup>2</sup> <br>Kapacita apartmánu B je 6 osob s možností 2 přistýlek."
+                    data-title="Apartmán B" sodipodi:nodetypes="ccccc" inkscape:label="budovab"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="fill:#ffe680ff;fill-opacity:1;"
+                    d="m 3.3651337,34.312421 4.21284,-11.954682 13.8421503,4.466214 -4.04565,13.26432 2.13985,27.771103 -14.2768103,0.973849 c -1.0268,-11.417313 -1.22764,-23.050616 -1.87238,-34.520804 z"
+                    id="zahradab" class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/terasa_budovab-scaled.jpg"
+                    data-description="Plocha: 300 m<sup>2</sup> <br> Zahrada apartmánu B je celá krytá krásným trávníkem a je v ní ovocný sad."
+                    data-title="Zahrada apartmánu B" sodipodi:nodetypes="ccccccc" inkscape:label="zahradab"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="display:inline;fill:#ffe680ff;fill-opacity:1;"
+                    d="m 15.633424,60.265757 -0.44998,-6.57213 3.32194,-0.2248 0.45498,6.577332 z" id="terasab"
+                    class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/terasa_budovab-scaled.jpg"
+                    data-description="Terasa apartmánu B je nyní krytá balkonem chystaného apartmánu C. Je zde k dispozici gril a posezení."
+                    data-title="Terasa apartmánu B" sodipodi:nodetypes="ccccc" inkscape:label="terasab"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="display:inline;fill:#aaeeff;fill-opacity:1;"
+                    d="m 47.532984,48.953547 4.07909,-0.906674 3.47725,17.260401 -3.84504,0.839504 z"
+                    id="kolarna" class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2024/02/pristavek_pro_kola.jpeg"
+                    data-description="Plocha: 15 m<sup>2</sup> <br> Nabízíme Vám krytou úschovnu kol, vleze se zde až 10 kol."
+                    data-title="Kolárna" sodipodi:nodetypes="ccccc" inkscape:label="terasab"
+                    inkscape:label="kolarna" sodipodi:nodetypes="ccccc"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="fill:#999999;fill-opacity:1;"
+                    d="m 7.5779737,22.357739 2.6413803,-7.051901 17.92124,6.615356 13.67498,11.484566 z"
+                    id="parkoviste" class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/2.jpg"
+                    data-description="Plocha: 66 m<sup>2</sup> <br> Bezpečné parkování pod kamerami před ubytováním i ve dvoře."
+                    data-title="Parkoviště" sodipodi:nodetypes="ccccc" inkscape:label="parkoviste"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="display:inline;fill:#ffd5d5;"
+                    d="m 25.952904,111.35944 0.79409,-9.53423 -16.42443,-1.36203 -0.7941003,9.521 z" id="garaz"
+                    sodipodi:nodetypes="ccccc" inkscape:label="garaz"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+                <path style="fill:#ffd5d5;fill-opacity:1;"
+                    d="m 5.2375137,68.833225 22.7359003,-1.578301 23.27087,-1.108115 4.88153,-1.074613 2.74169,18.267812 1.20366,13.768033 1.33741,12.760609 -23.43805,3.52597 -15.4136,-2.2499 -15.0792603,-1.24249 z"
+                    id="zamestnanci" class="hover-effect"
+                    data-src="https://selsky-dvur.info/wp-content/uploads/2024/03/socialnipodnik.jpg"
+                    data-description="Plocha: 1 147 m<sup>2</sup> <br> Zde jsou naše slepčiky a další zvířátka, zde má přístup pouze zaměstnanec Selského Dvora."
+                    data-title="Areál pro zaměstnance" sodipodi:nodetypes="cccccccccc" inkscape:label="dvura"
+                    inkscape:label="zamestnanci" sodipodi:nodetypes="cccccccccccccc"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+  
+                <path style="display:inline;fill:#777777;fill-opacity:1;"
+                    d="m 10.219354,15.305837 17.92124,6.615356 13.67498,11.484567 11.06703,12.156159 5.9849,37.778089 1.20366,13.768033 1.33741,12.760609 15.81482,-2.38422 -2.97572,-25.756284 c 0,0 -3.25993,-21.105369 -5.4165,-32.707448 -2.15657,-11.602079 -9.47983,-22.33779 -17.7875,-30.793361 -4.61204,-4.69415 -11.00192,-7.264505 -16.91819,-10.1749139 -5.91626,-2.9104081 -18.4562,-7.21980708 -18.4562,-7.21980708 z"
+                    class="hover-effect" data-src="https://selsky-dvur.info/wp-content/uploads/2019/06/1.jpg"
+                    data-href="./mapka.html"
+                    data-description="Selský dvůr je cca 16 km od Olomouce, 10 Km od Šternberka a je tu také v blízkosti jezero Náklo. <br>"
+                    data-title="Selský Dvůr" id="komunikace" sodipodi:nodetypes="ccccccccczazcc"
+                    inkscape:label="komunikace"
+                    transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
+  
+            </g>
+  
+        </g>
+    </svg>
