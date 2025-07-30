@@ -21,21 +21,18 @@
 </head>
 <body>
     <div id="tooltip"></div>
-    
-       <script type="module">
-            // Ensure you use the full URLs for the imports
+
+    <script type="module">
         import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
         import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
         import { SVGLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/SVGLoader.js';
 
- 
         // SVG Data as a string
         const svgData = `
         <svg width="100%" height="" viewBox="0 0 90.827335 118.4355" version="1.1" id="svg5"
             xmlns="http://www.w3.org/2000/svg">
             <g id="g3" transform="matrix(2.1476804,0,0,2.1584459,-50.795127,-314.30528)" inkscape:label="mapka">
                 <g id="objekty" inkscape:label="objekty" transform="translate(1.7013486e-7,1.0498795)">
-                    <!-- budovaa -->
                     <path style="fill:#87ce87;fill-opacity:1;"
                         d="m 17.641954,43.71498 -0.26748,-3.626707 4.04565,-13.26432 12.33758,4.029667 -4.11253,13.129999 -3.4145,-1.121373 0.17129,3.639913 z"
                         id="budovaa" class="hover-effect" data-src="./druhepatro.png"
@@ -43,7 +40,6 @@
                         Kapacita apartmánu A je 11 osob s možností 7 přistýlek.<br><br> Klikněte na obrázek vpravo pro otevření interaktivní mapy apartmánu A ➙"
                         data-title="Apartmán A" sodipodi:nodetypes="cccccccc" inkscape:label="budovaa"
                         transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
-                    <!-- budovab -->
                     <path style="fill:#ebcf5aff;fill-opacity:1;"
                         d="m 17.641954,43.71498 8.76001,2.787179 1.57145,20.752765 -8.45909,0.604452 z" id="budovab"
                         class="hover-effect"
@@ -51,12 +47,11 @@
                         data-description="Plocha: 74 m<sup>2</sup> <br>Kapacita apartmánu B je 6 osob s možností 2 přistýlek."
                         data-title="Apartmán B" sodipodi:nodetypes="ccccc" inkscape:label="budovab"
                         transform="matrix(0.46561863,0,0,0.46329631,23.651157,144.21474)" />
-                    <!-- Include other SVG paths as needed -->
-                </g>
+                    </g>
             </g>
         </svg>
         `;
-    // Initialize Three.js Scene
+        // Initialize Three.js Scene
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xe0e0e0);
 
