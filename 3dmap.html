@@ -23,9 +23,11 @@
     <div id="tooltip"></div>
     
        <script type="module">
+            // Ensure you use the full URLs for the imports
         import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
         import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
         import { SVGLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/SVGLoader.js';
+
  
         // SVG Data as a string
         const svgData = `
@@ -73,7 +75,7 @@
         document.body.appendChild(renderer.domElement);
 
         // Add Orbit Controls
-        const controls = new OrbitControls(camera, renderer.domElement); // Changed from THREE.OrbitControls
+        const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
 
         // Add Lights
@@ -112,7 +114,7 @@
         // Click Handler
         function onClick(event) {
             if (INTERSECTED) {
-                const data = INTERSECTED.userData;
+                const data = INTERSECTED.object.userData;
                 if (data && data.href) {
                     window.open(data.href, '_blank');
                 } else if (data && data.src) {
@@ -126,7 +128,7 @@
         window.addEventListener('click', onClick, false);
 
         // Load and Parse SVG
-        const loader = new SVGLoader(); // Changed from THREE.SVGLoader
+        const loader = new SVGLoader();
         const svgParsed = loader.parse(svgData);
 
         const paths = svgParsed.paths;
