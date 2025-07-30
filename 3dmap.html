@@ -22,17 +22,11 @@
 <body>
     <div id="tooltip"></div>
     
-    <!-- Include Three.js -->
-    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
-    
-    <!-- Include OrbitControls -->
-    <script src="https://unpkg.com/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
-    
-    <!-- Include SVGLoader -->
-    <script src="https://unpkg.com/three@0.152.2/examples/js/loaders/SVGLoader.js"></script>
-    
-    <!-- Main Script -->
-    <script>
+       <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
+        import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
+        import { SVGLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/SVGLoader.js';
+ 
         // SVG Data as a string
         const svgData = `
         <svg width="100%" height="" viewBox="0 0 90.827335 118.4355" version="1.1" id="svg5"
@@ -60,8 +54,7 @@
             </g>
         </svg>
         `;
-
-        // Initialize Three.js Scene
+    // Initialize Three.js Scene
         const scene = new THREE.Scene();
         scene.background = new THREE.Color(0xe0e0e0);
 
@@ -80,7 +73,7 @@
         document.body.appendChild(renderer.domElement);
 
         // Add Orbit Controls
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        const controls = new OrbitControls(camera, renderer.domElement); // Changed from THREE.OrbitControls
         controls.enableDamping = true;
 
         // Add Lights
@@ -119,7 +112,7 @@
         // Click Handler
         function onClick(event) {
             if (INTERSECTED) {
-                const data = INTERSECTED.object.userData;
+                const data = INTERSECTED.userData;
                 if (data && data.href) {
                     window.open(data.href, '_blank');
                 } else if (data && data.src) {
@@ -133,7 +126,7 @@
         window.addEventListener('click', onClick, false);
 
         // Load and Parse SVG
-        const loader = new THREE.SVGLoader();
+        const loader = new SVGLoader(); // Changed from THREE.SVGLoader
         const svgParsed = loader.parse(svgData);
 
         const paths = svgParsed.paths;
